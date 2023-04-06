@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/portfio/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Poppins,sans-serif;
+        }
+        body{
+            background-color: rgb(16, 16, 16);
+            max-width: 100%;
+            height: auto;
+            margin: auto 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+        .container1{
+            max-width: 1600px;
+            width: 100%;
+            height: auto;
+        }
+        
+        .box_resume{
+            text-align: center;
+            margin-top: 45px;
+        }
+        .box_resume span{
+            font-size: 95px;
+            font-weight: 800;
+            color: hsla(0,0%,100%,.07);
+            letter-spacing: 10px;
+            line-height: .7;
+        }
+        .box_resume span h1{
+            font-size: 48px;
+            margin-top: -55px;
+            font-weight: 800;
+            letter-spacing: normal;
+            color: #ededed;
+        }
+        .box_resume span h1 span{
+            font-size: 48px;
+            margin-top: -55px;
+            font-weight: 800;
+            color:#FFB400;
+            letter-spacing: normal;
+        }
+        
+        .box_icon{
+            margin-top: 100px;
+            position: fixed;
+            right: 30px;
+        }
+        .box_icon .fa{
+            color: rgb(255, 255, 255);
+            font-size: 15px;
+            margin-top: 17px;
+        }
+        .box_icon .fa-house{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            transition: 0.4s;
+        }
+        .box_icon .fa-house:hover{
+            background-color: #FFB400;
+            transition: 0.4s;
+        }
+        .box_icon .fa-user{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            transition: 0.4s;
+        }
+        .box_icon .fa-user:hover{
+            background-color: #FFB400;
+            transition: 0.4s;
+        }
+        .box_icon .fa-briefcase{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            transition: 0.4s;
+        }
+        .box_icon .fa-briefcase:hover{
+            background-color: #FFB400;
+            transition: 0.4s;
+        }
+        .box_icon .fa-envelope-open{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            transition: 0.4s;
+        }
+        .box_icon .fa-envelope-open:hover{
+            background-color: #FFB400;
+            transition: 0.4s;
+        }
+        .box_icon .fa-comments{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            transition: 0.4s;
+        }
+        .box_icon .fa-comments:hover{
+            background-color: #FFB400;
+            transition: 0.4s;
+        }
+        .box_icon ul li{
+            list-style: none;
+        }
+        .fa-circle-half-stroke{
+            color: aliceblue;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            padding: 13.5px;
+            font-size: 22px;
+            position: fixed;
+            right: 30px;
+            top: 40px;
+        }
+        .fa-moon{
+            color: aliceblue;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+            padding: 13.5px;
+            font-size: 22px;
+            position: fixed;
+            right: 30px;
+            top: 40px;
+        }
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            width: 50px;
+            height: 50px;
+            border-radius: 90px;
+            background-color: #2b2a2a;
+          }
+          html{
+            scroll-behavior: smooth;
+          }
+          #myBtn:hover {
+            background-color: #FFB400;
+          }
+        
+        .box_navbar{
+            color: #ededed;
+            margin-top: 60px;
+            text-align: center;
+        }
+        .box_navbar ul li{
+            display: inline-block;
+            padding-left: 30px;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+        .box_navbar ul li h1{
+            font-size: 15px;
+        }
+        .box_navbar ul li:hover{
+            color: #FFB400;
+            transition: 0.4s;
+        }
+        
+        .box_photo{
+            margin-top: 10px;
+            margin-left: 70px;
+            cursor: pointer;
+        }
+        .box_photo .pic1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28%;
+            height: 230px;
+            position: relative;
+            display: inline-block;
+            margin-left: 25px;
+        }
+        .box_photo .pic1 .color1{
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 230px;
+            background-color: #FFB400;
+            margin-left: 24px;
+            margin-top: 24px;
+            border-radius: 10px;
+            transition: 0.4s;
+            opacity: 0;
+        }
+        .box_photo .pic1 .color1:hover{
+            transition: 0.4s;
+            opacity: 1;
+        }
+        .box_photo .pic1 .color1 h1{
+            color: #ededed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 15px;
+        }
+        .box_photo .pic1 h1{
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            height: 230px;
+            margin-left: 24px;
+            margin-top: 24px;
+            border-radius: 10px;
+        }
+        .box_photo .pic1 img{
+            position: absolute;
+            width: 100%;
+            height: 230px;
+            margin-left: 24px;
+            margin-top: 24px;
+            border-radius: 10px;
+        }
+        
+        
+        .space{
+            margin-bottom: 100px;
+        }
+        @media only screen and ( max-width:600px){
+            .box_resume{
+                text-align: center;
+                margin-top: 68px;
+            }
+            .box_resume span{
+                margin-left: -90px;
+                font-size: 55px;
+                font-weight: 800;
+                color: hsla(0,0%,100%,.07);
+                letter-spacing: 1px;
+                line-height: .7;
+            }
+            .box_resume span h1{
+                font-size: 28px;
+                margin-top: -35px;
+                font-weight: 800;
+                letter-spacing: 1;
+                color: #ededed;
+                margin-left: -135px;
+            }
+            .box_resume span h1 span{
+                font-size: 28px;
+                margin-top: -55px;
+                margin-left: 0px;
+                font-weight: 800;
+                color:#FFB400;
+                letter-spacing: 1;
+            }
+        
+            .box_icon{
+                z-index: 1;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: #2b2a2a;
+                position: fixed;
+                overflow: hidden;
+            }
+            .box_icon ul li{
+                display: inline-block;
+            }
+            .box_icon .fa{
+                margin-left: 19px;
+                margin-bottom: 15px;
+                width:52px;
+                height:52px;
+                background-color: #444444;
+            }
+            #myBtn {
+                display: none;
+                position: fixed;
+                bottom: 100px;
+                right: 10px;
+                z-index: 99;
+                font-size: 18px;
+                border: none;
+                outline: none;
+                background-color: red;
+                color: white;
+                cursor: pointer;
+                padding: 15px;
+                width: 54px;
+                height: 54px;
+                border-radius: 90px;
+                background-color: #2b2a2a;
+              }
+              html{
+                scroll-behavior: smooth;
+              }
+              #myBtn:hover {
+                background-color: #FFB400;
+              }
+              
+        .box_photo{
+            cursor: pointer;
+            margin-left: -22px;
+            margin-top: 20px;
+        }
+        .box_photo .pic1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 88%;
+            height: 170px;
+            margin-top: 65px;
+            padding-top: 90px;
+            position: relative;
+        }
+        .box_photo .pic1 .color1{
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 215px;
+            background-color: #FFB400;
+            margin-left: 24px;
+            margin-top: 24px;
+            border-radius: 10px;
+            transition: 0.4s;
+            opacity: 0;
+        }
+        .box_photo .pic1 .color1:hover{
+            transition: 0.4s;
+            opacity: 1;
+        }
+        .box_photo .pic1 .color1 h1{
+            color: #ededed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 15px;
+        }
+        .box_photo .pic1 h1{
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            height: 215px;
+            margin-left: 24px;
+            margin-top: 24px;
+            border-radius: 10px;
+        }
+        .box_photo .pic1 img{
+            position: absolute;
+            width: 100%;
+            height: 215px;
+            border-radius: 10px;
+        }
+        .space{
+            margin-bottom: 200px;
+        }
+        
+        .box_navbar{
+            color: #ededed;
+            margin-top: 60px;
+            text-align: center;
+        }
+        .box_navbar ul li{
+            display: inline-block;
+            float: left;
+            padding-top: 18px;
+            padding-left: 30px;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+        .box_navbar ul li h1{
+            font-size: 15px;
+        }
+        .box_navbar ul li:hover{
+            color: #FFB400;
+            transition: 0.4s;
+        }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-upload"></i></button>
+        <div class="box_icon">
+            <div class="box_icon">
+                <ul>
+                    <li><a href="/index.html"><i class="fa fa-house"></i></a></li>
+                    <li><a href="/about/index1.html"><i class="fa fa-user"></i></a></li>
+                    <li><a href=""><i class="fa fa-briefcase"></i></a></li>
+                    <li><a href="/index3.html"><i class="fa fa-envelope-open"></i></a></li>
+                    <li><a href=""><i class="fa fa-comments"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box_resume">
+            <span>
+                <span>WORKS</span>
+                <h1>MY<span> PORTFOLIO</span></h1>
+            </span>
+        </div>
+        <div class="box_navbar">
+            <ul>
+                <li><h1 style="color: #FFB400;">ALL</h1></li>
+                <li><h1>LOGO</h1></li>
+                <li><h1>VIDEO</h1></li>
+                <li><h1>GRAPHIC DESIGN</h1></li>
+                <li><h1>MOCKUP</h1></li>
+            </ul>
+        </div>
+        <!--pic1-->
+        <div class="box_photo"> 
+            <div class="pic1">
+                 <img src="https://tunis-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fproject-1.3cb250b1.jpg&w=1080&q=75" alt="">
+                 <div class="color1">
+                    <h1>MOCKUP PROJECT</h1>
+                 </div>
+            </div>
+            <div class="pic1">
+                <img src="https://tunis-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fproject-2.f5a228df.jpg&w=1080&q=75" alt="">
+                <div class="color1">
+                   <h1>YOUTUBE PROJECT</h1>
+                </div>
+           </div>
+           <div class="pic1">
+                <img src="https://tunis-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fproject-3.c1ae3f32.jpg&w=1080&q=75" alt="">
+                <div class="color1">
+                    <h1>SLIDER PROJECT</h1>
+                </div>
+            </div>
+       </div>
+       <!--pic2-->
+        <div class="box_photo">
+            <div class="pic1">
+                <img src="https://tunis-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fproject-4.bfd1cb7c.jpg&w=1080&q=75" alt="">
+                 <div class="color1">
+                    <h1>LOCAL PROJECT</h1>
+                 </div>
+            </div>
+            <div class="pic1">
+                <img src="https://tunis-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fproject-5.9d9c9e19.jpg&w=1080&q=75" alt="">
+                <div class="color1">
+                   <h1>PERSONAL PROJECT</h1>
+                </div>
+           </div>
+           <div class="pic1">
+            <img src="https://tunis-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fproject-6.97d38976.jpg&w=1080&q=75" alt="">
+                <div class="color1">
+                    <h1>FACEBOOK PROJECT</h1>
+                </div>
+            </div>
+       </div>
+       <!--pic3-->
+       <div class="box_photo">
+        <div class="pic1">
+            <img src="https://tunis-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fproject-7.86186e33.jpg&w=1080&q=75" alt="">
+             <div class="color1">
+                <h1>MOCKUP PROJECT</h1>
+             </div>
+        </div>
+        <div class="pic1">
+            <img src="https://tunis-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fproject-8.5013e616.jpg&w=1080&q=75" alt="">
+            <div class="color1">
+               <h1>MOCKUP PROJECT</h1>
+            </div>
+       </div>
+       <div class="pic1">
+        <img src="https://tunis-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fproject-9.67d36946.jpg&w=1080&q=75" alt="">
+            <div class="color1">
+                <h1>MOCKUP PROJECT</h1>
+            </div>
+        </div>
+   </div>
+        <div class="space"></div>
+</div>
+
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
